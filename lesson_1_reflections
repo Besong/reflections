@@ -1,0 +1,79 @@
+SOME COMMAND LINES USED IN GIT AND GIT BASH.
+
+cd ~                          # change directories to your home directory
+mkdir version-control         # make version-control directory
+cd version-control            # go to version-control directory
+mkdir reflections             # create reflections directory
+cd reflections                # go to reflections directory
+subl lesson_1_reflections.txt # launch sublime with file called lesson_1_reflections.txt (you can replace subl with another editor here if you prefer a different one)
+
+
+
+HOW COULD HAVING EASY ACCESS TO THE ENTIRE HISTORY OF A FILE MAKE YOU A MORE EFFICIENT PROGRAMMER IN A LONG TERM??..
+
+- By providing opportunities for the programmer to be able to easily update his\her codes with ease.
+- To ease code sharing to other to other programmers.
+ 
+ WHAT ARE COMMITS IN GIT??
+ Git Commit or revision is an individual change to a file(or set of files). It helps record your changes to the local repository.
+
+ HOW OFTEN TO COMMIT??
+  Always make one commit per logical change. That is, use one commit
+for each logical change. Doing this, makes each commit have a purpose that can easily be understood. 
+
+WHAT IS A README?
+ General description of what the project does and how to use it.
+
+ ND: Collections of files which you can track together is called a
+ 					REPOSITORY.
+
+ 	WHAT DO YOU THINK ARE THE PROS AND CONS OF MANUALLY CHOOSING WHEN TO CREATE A COMMIT, LIKE YOU DO IN  Git, vs HAVING VERSIONS AUTOMATICALLY SAVED, LIKE GOOGLE Docs DOES??
+
+
+
+
+ 	WHY DO YOU THINK SOME VERSION CONTROL SYSTEMS, LIKE GIT, ALLOW SAVING MULTIPLE FILES IN ONE COMMIT, WHILE OTHERS LIKE GOOGLE Docs, TREAT EACH FILE SEPARATELY
+
+ 	Git makes to it clear for developers to be able to keep track of repositories changes. This makes it easier for codes changes to be 
+ 	concurrent across multiple files in a single repository. Google Docs, on the other hand, treat each file separately for easy checks; files too might not be interdependent to each other.
+
+
+
+
+ 	Some additional Git commands:
+ 	- git log: Shows a list of the recent commits with information about them, including commit IDS.
+ 	- git diff; followed by two commit IDS will compare the two versions of the code in those commits.
+
+ 	HOW CAN YOU USE THE COMMANDS git log and git diff TO VIEW THE HISTORY OF FILES??.
+ 		git log command will be use to view recent commits with information about them, including their
+ 		commit IDS. 
+ 		git diff compare two versions of the code in those commits. The command "git diff " is followed 
+ 		by the two commit IDS to be compared.
+
+ 		WHAT IS A GIT REPOSITORY??.
+ 		  A Git repository is a collection of files that are tracked by Git as a cohesive unit.
+
+ 		  WHAT ARE CLONES??.
+ 		  Clone takes an existing repository and creates a new one just like it.
+
+ 		  WHAT ARE LOGS??.
+ 		  Logs shows the commits in the repository prior to the current commit.
+
+ 		 ---- GIT ERRORS AND WARNINGS SOLUTION ---
+
+Should not be doing an octopus
+
+Octopus is a strategy Git uses to combine many different versions of code together. This message can appear if you try to use this strategy in an inappropriate situation.
+
+
+You are in 'detached HEAD' state
+
+HEAD is what Git calls the commit you are currently on. You can “detach” the HEAD by switching to a previous commit, which we’ll see in the next video. Despite what it sounds like, it’s actually not a bad thing to detach the HEAD. Git just warns you so that you’ll realize you’re doing it.
+
+Panic! (the 'impossible' happened)
+
+This is a real error message, but it’s not output by Git. Instead it’s output by GHC, the compiler for a programming language called Haskell. It’s reserved for particularly surprising errors!
+
+HOW MIGHT USING VERSION CONTROL MAKE YOU MORE CONFIDENT TO MAKE CHANGES THAT
+COULD BREAK SOMETHING??.
+     Git provides the 'git check out command' that makes it easier for one to keep track of previous versions of your code  and identify changes if need been. Hence, confidentiallity and more code maintainability. 
