@@ -1,0 +1,64 @@
+  LEVEL 1: SECTION 1
+
+Different levels of configuration
+--local to set configuration for a single repo
+--global to set configuration for your user
+--system to set configuration for all users
+
+Configuring Line Endings
+
+Linux/Mac:
+$ git config --global core.autocrlf input  ------------------------
+											autocrlf: auto carriage return/line feed handling
+                                           -------------------------
+Windows:
+$ git config --global core.autocrlf true
+
+Both of these strip carriage returns, on saving files to the repository
+
+Configuring Push Default
+Matching - Pushes all matching branches up to GitHub
+Simple - Just pushes current branch up to GitHub(the default in Git 2.o and later)
+
+$ git config --global push.default simple
+
+Configuring pull Default
+git pull
+- git fetch
+- git merge
+
+
+git pull --rebase
+- git fetch
+- git rebase
+
+Defaults all new branches to fetch then rebase
+$ git config --global pull.rebase true
+
+Configuring Reuse Recorded Resolution(ReReRe)
+- Records all fixes to merge conflits
+- Reuses them automatically if the same conflict recurs
+
+$ git config --global rerere.enabled true
+
+Configuring Aliases
+Aliases allows you to use your own custom commands in git.
+
+$ git config --global alias.s "status -s"; now we can just type "git s"
+to get the (silent) status output
+
+$ git config --global alias.lg "log --oneline  --decorate  --all --graph"; typing just "git lg" will now give us a concise, useful log output
+
+Sharing Configurations
+Use 
+- Wiki page 
+- Put dot files into a repo
+
+LEVEL 1: SECTION 2
+ Forking and Cloning
+
+ You can clone a Repo if you are a collaborator or not.
+ You can only push your commits to the repository if you are a collaborator, but not vice versa
+
+ If you are not a collaborator, then you have to fork(process
+ of cloning the Repo as yours and be able to perform pushes) the Repo

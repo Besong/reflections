@@ -6,6 +6,12 @@ cd version-control            # go to version-control directory
 mkdir reflections             # create reflections directory
 cd reflections                # go to reflections directory
 subl lesson_1_reflections.txt # launch sublime with file called lesson_1_reflections.txt (you can replace subl with another editor here if you prefer a different one)
+git add <list of files>		  # add list of files 
+git add --all   			  # add all files 
+git add *.txt                 # add all txt files in the current directory
+git add docs/*.txt 			  # add all txt files in docs directory
+git add docs/				  # add all files in docs direcctory
+git add "*.txt"  			  # add all txt files in the whole project		
 
 
 
@@ -77,3 +83,6 @@ This is a real error message, but it’s not output by Git. Instead it’s outpu
 HOW MIGHT USING VERSION CONTROL MAKE YOU MORE CONFIDENT TO MAKE CHANGES THAT
 COULD BREAK SOMETHING??.
      Git provides the 'git check out command' that makes it easier for one to keep track of previous versions of your code  and identify changes if need been. Hence, confidentiallity and more code maintainability. 
+
+     WHAT'S REBASING??
+     

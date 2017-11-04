@@ -4,13 +4,47 @@ WHAT HAPPENS WHEN YOU INITIALIZE A REPOSITORY? WHY DO YOU NEED TO DO
  Initializing a repository creates a git repository. This is to help create git commits.
 
  HOW IS THE STAGING AREA DIFFERENT FROM THE WORKING DIRECTORY AND THE REPOSITORY??  WHAT VALUE DO YOU THINK IT OFFERS??
-
+  A staging area is a place where we can group files together before
+  we "commit" them to Git.
  The staging area provides a link between the working directory and the repository. It lets you add files from the working directory to the git repository for tracking.
 
  HOW CAN YOU USE THE STAGING AREA TO MAKE SURE YOU HAVE ONE COMMIT PER LOGICAL CHANGE?
+  Run the git command 'git status' to make sure the files and folders are staged before actually commiting it. This way you can be sure you're committing only the things you want.
 
  WHAT ARE SOME SITUATIONS WHEN BRANCHES WOULD BE HELPFUL IN KEEPING YOUR HISTORY ORGANIZED? HOW WOULD BRANCES HELP?
 
+ Branches are what naturally happens when you want to work on multiple features at the same time. You wouldn't want to end up with a master branch which has Feature A half done and Feature B half done.
+
+Rather you'd separate the code base into two "snapshots" (branches) and work on and commit to them separately. As soon as one was ready, you might merge this branch back into the master branch and push it to the remote server.
+
  WHAT IS THE RESULT OF MERGING TWO BRANCES TOGETHER? WHY DO WE REPRESENT IT IN THE DIAGRAM THE WAY WE DO?
 
+Merging two branches together results in a single comprehensive unit of development histories made by the branches. 
+
  WHAT ARE THE PROS AND CONS OF GIT'S AUTOMATIC MERGING vs. ALWAYS DOING MERGES MANUALLY?
+
+ Diagrams are ways to see how each commit is originated. This gives a clear understanding of the concept of reacheability and how to keep track of project files.
+
+ HEAD??
+ The HEAD is a pointer that holds your position within all your different commits.By default HEAD points to your most recent commit, so it can be used as a quick way to reference that commit without having to look up the SHA
+
+ Removing one file is great and all, but what if you want to remove an entire folder? You can use the recursive option on git rm:
+git rm -r folder_of_cats
+This will recursively remove all folders and files from the given directory.
+
+
+The '-a' option
+If you happen to delete a file without using 'git rm' you'll find that you still have to 'git rm' the deleted files from the working tree. You can save this step by using the '-a' option on 'git commit', which auto removes deleted files with the commit.
+git commit -am "Delete stuff"
+
+
+Pull Requests
+If you're hosting your repo on GitHub, you can do something called a pull request.
+A pull request allows the boss of the project to look through your changes and make comments before deciding to merge in the change. It's a really great feature that is used all the time for remote workers and open-source projects.
+
+Merge Conflicts
+Merge Conflicts can occur when changes are made to a file at the same time. A lot of people get really scared when a conflict happens, but fear not! They aren't that scary, you just need to decide which code to keep.
+
+Force delete
+What if you have been working on a feature branch and you decide you really don't want this feature anymore? You might decide to delete the branch since you're scrapping the idea. You'll notice that git branch -d bad_feature doesn't work. This is because -d won't let you delete something that hasn't been merged.
+You can either add the --force (-f) option or use -D which combines -d -f together into one command.
