@@ -3,6 +3,17 @@
  Can also be important in cases where the developer needs his/her project to be open source(for collaborations).
  
 - Why might you want to always pull changes manually rather than having Git automatically stay up-to-date with your remote repository?.
+<<<<<<< HEAD
 
  - What is the benefit of having a copy of the last known state of the remote stored locally?
     To checkout that both repositories should not be conflicted on a merge for continuous work flow.
+
+
+- Describe the differences between forks, clones, and branches. When would you use one instead of another?
+
+- What is the benefit of having a copy of the last known state of the remote stored locally?
+    To checkout that both repositories should not be conflicted on a merge for continuous work flow.
+
+- How would you collaborate without using Git or GitHub? What would be easier, and what would be harder?
+
+    
